@@ -14,7 +14,7 @@ function LoginForm() {
     const { user, setUser } = useContext(UserContext)
     let navigate = useNavigate()
     useEffect(() => {
-        if (user !== null) navigate('/user')
+        // if (user !== null) navigate('/user')
     }, [])
     const handleSubmit = async (e) => {
         e.preventDefault();
