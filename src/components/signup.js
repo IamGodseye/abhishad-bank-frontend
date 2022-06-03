@@ -11,9 +11,9 @@ function SignupForm() {
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState("");
     const { user, setUser } = useContext(UserContext)
-    // useEffect(() => {
-    //    if (user !== null) navigate('/user')
-    // }, [])
+    useEffect(() => {
+        if (user !== null) navigate('/user')
+    }, [])
     let navigate = useNavigate()
     const handleSubmit = async (e) => {
         e.preventDefault();
