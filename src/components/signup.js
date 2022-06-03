@@ -11,9 +11,9 @@ function SignupForm() {
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState("");
     const { user, setUser } = useContext(UserContext)
-    useEffect(() => {
-        // if (user !== null) navigate('/user')
-    }, [])
+    // useEffect(() => {
+    //    if (user !== null) navigate('/user')
+    // }, [])
     let navigate = useNavigate()
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -89,9 +89,9 @@ function SignupForm() {
                 }}
             >
                 Already registerd?{" "}
-                <a href="/login" style={{ textDecoration: 'none', fontWeight: '700' }}>
+                <button onClick={() => navigate("/login")} className="m-2 btn btn-primary" style={{ textDecoration: 'none', fontWeight: '700' }}>
                     <span>Login</span>
-                </a>
+                </button>
             </p>
 
         </div>

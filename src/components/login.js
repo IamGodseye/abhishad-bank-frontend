@@ -13,9 +13,9 @@ function LoginForm() {
     const [loading, setLoading] = useState("");
     const { user, setUser } = useContext(UserContext)
     let navigate = useNavigate()
-    useEffect(() => {
-        // if (user !== null) navigate('/user')
-    }, [])
+    // useEffect(() => {
+    //     // if (user !== null) navigate('/user')
+    // }, [])
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
@@ -93,9 +93,9 @@ function LoginForm() {
                 }}
             >
                 New here? Please{" "}
-                <a href="/signup" style={{ textDecoration: 'none', fontWeight: '700' }}>
+                <button onClick={() => navigate("/signup")} className="m-2 btn btn-primary" style={{ textDecoration: 'none', fontWeight: '700' }}>
                     <span>Signup</span>
-                </a>
+                </button>
             </p>
 
         </div>

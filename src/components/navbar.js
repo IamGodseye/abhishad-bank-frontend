@@ -45,8 +45,8 @@ function Navbar() {
                                 </>
                             ) : (
                                 <>
-                                    <a class="nav-link" href="/signup" style={{ color: 'white' }}>Signup</a>
-                                    <a class="nav-link" href="/login" style={{ color: 'white' }}>Login</a>
+                                    <button class="nav-link btn btn-primary m-2" onClick={() => navigate('/signup')} style={{ color: 'white' }}>Signup</button>
+                                    <button class="btn btn-primary nav-link m-2" onClick={() => navigate('/login')} style={{ color: 'white' }}>Login</button>
                                 </>
                             )}
                         </div>
